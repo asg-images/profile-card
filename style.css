@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: kumbh sans;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background: hsl(185, 75%, 39%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat, no-repeat;
+}
+
+
+/*Text Styles*/
+
+.text-light{
+  color: hsl(0, 0%, 59%);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.text-primary{
+  font-weight: 700;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+/*Base Card styling*/
+
+.profile-card{
+  background: white;
+  height: 400px;
+  width: 400px;
+  border-radius: 15px;
+}
+
+/*I found I had to add border top-right and left otherwise background img lost border radius from profile card, not sure this is best way*/
+
+header{
+  width: 100%;
+  height: 140px;
+  background: url("images/bg-pattern-card.svg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/*I put the img and h2 & h4 inside a main class and then used padding to push down,
+This could be done a better way, I could out this is a section or article tag*/
+
+.main{
+  padding-top: 90px;
+  border-bottom: 1px solid hsl(0, 0%, 59%);
+  padding-bottom: 50px;
+}
+
+/*Adding border radius and white border to image*/
+
+.main-img{
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+
+/*Aligning items in footer using flex and relative position*/
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 180px;
+}
+
+/*Responsive for Iphone need to learn how to look good on landscape*/
+
+@media(max-width: 440px) {
+  .profile-card {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
